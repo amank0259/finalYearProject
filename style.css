@@ -257,7 +257,6 @@ input:-moz-placeholder {
     display: flex;
     align-items: center;
     gap: 2vw;
-
 }
 
 .rotate-b{
@@ -286,15 +285,6 @@ input:-moz-placeholder {
     z-index: 99;
 }
 
-@keyframes rotate{
-    0%{
-        rotate: 0deg;
-    }
-    100%{
-        rotate: 360deg;
-    }
-}
-
 .bottom-center-h{
     display: flex;
     gap: 1vw;
@@ -306,6 +296,35 @@ input:-moz-placeholder {
     border-radius: 20px;
     background-color: #b9e901;
     rotate: 3deg;
+}
+
+.scroll{
+    position: absolute;
+    bottom: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8vw;
+    animation: upDown 2s linear infinite;
+}
+
+@keyframes upDown {
+    0%, 100% {
+      bottom: 3vh;
+    }
+    50% {
+      bottom: 7vh;
+    }
+  }
+
+
+.scroll i{
+    font-size: 1.5vw;
+    color: #5f20ea;
+}
+
+.scroll p{
+    font-size: 1vw;
 }
 
 .creative h1{
@@ -326,6 +345,7 @@ input:-moz-placeholder {
     border-radius: 50px;
     background-color: #5f20ea;
     gap: 10vw;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;  
 }
 
 .right-img{
@@ -356,4 +376,202 @@ input:-moz-placeholder {
 .right-img svg{
     margin-left: 7vw;
     rotate: 33deg;
+}
+
+
+/* ------------- Part 2 ------------ */
+
+.part-2{
+    position: relative;
+    width: 100%;
+    height: 200vh;
+    background-color: #111;
+    border-radius: 100px;
+    padding: 5vw;
+    color: #fff;
+    overflow: hidden;
+}
+
+.heading-services{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 10vh;
+    color: #fff;
+    font-size: 1.5vw;
+}
+
+.cir-ser-1{
+    width: 2vw;
+    height: 2vw;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 0.5vw;
+}
+.cir-ser-2{
+    width: 2vw;
+    height: 2vw;
+    background-color: #b9e901;
+    border-radius: 50%;
+    margin-right: 0.5vw;
+}
+
+.part-2 h1{
+    margin: 5vh 0;
+    font-size: 4.5vw;
+}
+
+.part-2 p{
+    font-size: 1vw;
+}
+
+.services{
+    margin-top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.services-items{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 10vw;
+    position: relative;
+    width: 100%;
+    height: 10vh;
+    margin-bottom: 5vh;
+    /* background-color: #5f20ea; */
+    overflow: hidden  ;
+}
+
+.hover-div{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #b9e901;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+ 
+.services-items h2{
+    font-weight: 300;
+    font-size: 2vw;
+    z-index: 2;
+    margin-left: 2vw;
+}
+
+.services-items i{
+    font-size: 3.5vw;
+    margin-left: 5vw;
+    z-index: 2;
+}
+
+.ser-name{
+    width: 30vw;
+}
+
+.banner-1{
+    margin-top: 2vh;
+    position: absolute;
+    left: -5%;
+    top: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 130%;
+    height: 18vh;
+    rotate: -8deg;
+    background-color: #b9e901;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+ 
+.banner-1 h1{
+    font-size: 4vw;
+    text-transform: uppercase;
+}
+
+.banner-2{
+    margin-top: 2vh;
+    position: absolute;
+    right: -5%;
+    top: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 130%;
+    height: 18vh;
+    rotate: 2deg;
+    background-color: #fff;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+.banner-2 h1{
+    font-size: 4vw;
+    text-transform: uppercase;
+    color:#111;
+}
+
+.register-now{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    height: 10vw;
+    width: 10vw;
+    border-radius: 50%;
+    border: 3px solid #b9e901;
+}
+
+.register-now svg{
+    fill: currentColor;
+    height: auto;
+    transform-origin: center;
+    width: 90%;
+    animation: rotate 5s infinite linear;
+}
+
+.register-now .cir-svg{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vw;
+    width: 5vw;
+    border-radius: 50%;
+    background-color: #5f20ea;
+}
+
+.register-now .cir-svg img{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75%;
+    width: 75%;
+    animation: rotateInvert 5s infinite linear;
+}
+
+@keyframes rotate{
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+
+@keyframes rotateInvert{
+    0%{
+        rotate: 360deg;
+    }
+    100%{
+        rotate: -360deg;
+    }
 }
