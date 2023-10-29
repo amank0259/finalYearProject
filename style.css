@@ -17,11 +17,16 @@ html,body{
     height: 100%;
     width: 100%;
     font-family: normal;
+    scroll-behavior: smooth;
 }
+body::-webkit-scrollbar{
+    display: none;
+  }
 
 #main{
     width: 100%;
     min-width: 100vh;
+    overflow: hidden;
 }
 
 nav{
@@ -306,6 +311,7 @@ input:-moz-placeholder {
     align-items: center;
     gap: 0.8vw;
     animation: upDown 2s linear infinite;
+    cursor: pointer;
 }
 
 @keyframes upDown {
@@ -323,8 +329,10 @@ input:-moz-placeholder {
     color: #5f20ea;
 }
 
-.scroll p{
+.scroll a{
     font-size: 1vw;
+    text-decoration: none;
+    color: #111;
 }
 
 .creative h1{
@@ -486,7 +494,7 @@ input:-moz-placeholder {
     rotate: -10deg;
     background-color: #b9e901;
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+    /* transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.1s; */
 }
  
 .banner-1 h1{
@@ -507,7 +515,7 @@ input:-moz-placeholder {
     rotate: 3deg;
     background-color: #fff;
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+    /* transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.1s; */
 }
 
 .banner-2 h1{

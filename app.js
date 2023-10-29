@@ -1,3 +1,78 @@
+let loaderAnimation = function(){
+  var tl2 = gsap.timeline();
+
+tl2.to("#main",{
+  dsiaplay: "none",
+  opacity: "0",
+  height: "0vh"
+})
+.to(".loader-text-content",{
+    marginTop: "0vh",
+    duration: 1,
+})
+.to(".loader-text-content",{
+    marginTop: "-14vh",
+    duration: 1,
+})
+.to(".loader-text-content",{
+    marginTop: "-28vh",
+    duration: 1,
+})
+.to(".loader-text-content",{
+    marginTop: "-42vh",
+    duration: 1,
+})
+.to(".loader-text-content",{
+    marginTop: "-56vh",
+    duration: 1,
+})
+.to(".loader-text-content",{
+    marginTop: "-70vh",
+    duration: 1,
+})
+.to(".loader-text-content",{
+    marginTop: "-84vh",
+    duration: 1,
+})
+.to(".loader-text-content",{
+    marginTop: "-98vh",
+    duration: 1,
+})
+.to(".loader-img",{
+    width: "100%",
+    height: "100vh",
+    opacity: "0"
+},'same')
+.to("#loader",{
+    dsiaplay: "none",
+    opacity: "0",
+},'same')
+.to("#loader",{
+    marginTop: "-49%",
+})
+.to("#main",{
+  dsiaplay: "block",
+  opacity: 1,
+  height: "300vh"
+})
+
+var nike = document.getElementById("loader");
+var tilt = 0;
+var diftilt = 0;
+nike.addEventListener("mousemove",function(detail){
+    tilt = detail.clientX;
+    diftilt = detail.clientX - tilt;
+    gsap.to("#nike",{
+        ease: Power1,
+        top: detail.clientY,
+        left: detail.clientX,
+        xPercent: -170,
+        yPercent: -90,
+        rotate: gsap.utils.clamp(-80,80, diftilt * 0.5)
+    })
+})
+}
+
 let magnetForIcon = function(){
 
 let cursor = document.getElementById("cursor"),
@@ -133,91 +208,27 @@ let serviceListHover = function(){
 }
 
 let bannerAnimation = function(){
-var tl = gsap.timeline({scrollTrigger:{
+var tll = gsap.timeline({scrollTrigger:{
   trigger:".part-2",
-  start:"45% 45%",
+  start:"-30% 30%",
   end:"100% 100%",
   scrub: true,
   // markers: true
 }})
 
-tl.to(".banner-1",{
-  left: "-20%"
+tll.to(".banner-1",{
+  left: "-30%",
+  delay: 0,
 },'a')
-tl.to(".banner-2",{
-  right: "-15%"
+.to(".banner-2",{
+  right: "-20%",
+  delay: 0
 },'a')
 }
 
-let loaderAnimation = function(){
-  var tl2 = gsap.timeline();
-
-tl2.to(".loader-text-content",{
-    marginTop: "0vh",
-    duration: 1,
-})
-.to(".loader-text-content",{
-    marginTop: "-14vh",
-    duration: 1,
-})
-.to(".loader-text-content",{
-    marginTop: "-28vh",
-    duration: 1,
-})
-.to(".loader-text-content",{
-    marginTop: "-42vh",
-    duration: 1,
-})
-.to(".loader-text-content",{
-    marginTop: "-56vh",
-    duration: 1,
-})
-.to(".loader-text-content",{
-    marginTop: "-70vh",
-    duration: 1,
-})
-.to(".loader-text-content",{
-    marginTop: "-84vh",
-    duration: 1,
-})
-.to(".loader-text-content",{
-    marginTop: "-98vh",
-    duration: 1,
-})
-.to(".loader-img",{
-    width: "100%",
-    height: "100vh",
-    opacity: "0"
-},'same')
-.to("#loader",{
-    dsiaplay: "none",
-    opacity: "0",
-},'same')
-.to("#loader",{
-    marginTop: "-49%",
-})
-
-var nike = document.getElementById("loader");
-var tilt = 0;
-var diftilt = 0;
-nike.addEventListener("mousemove",function(detail){
-    tilt = detail.clientX;
-    diftilt = detail.clientX - tilt;
-    gsap.to("#nike",{
-        ease: Power1,
-        top: detail.clientY,
-        left: detail.clientX,
-        xPercent: -170,
-        yPercent: -90,
-        rotate: gsap.utils.clamp(-80,80, diftilt * 0.5)
-    })
-})
-}
-
-
+loaderAnimation();
 magnetForIcon();
 leftImageChange();
 rightImageChange();
 serviceListHover();
 bannerAnimation();
-loaderAnimation();
