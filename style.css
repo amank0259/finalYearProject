@@ -483,7 +483,7 @@ input:-moz-placeholder {
     justify-content: space-between;
     width: 130%;
     height: 18vh;
-    rotate: -8deg;
+    rotate: -10deg;
     background-color: #b9e901;
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
@@ -504,7 +504,7 @@ input:-moz-placeholder {
     justify-content: space-between;
     width: 130%;
     height: 18vh;
-    rotate: 2deg;
+    rotate: 3deg;
     background-color: #fff;
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
@@ -575,3 +575,143 @@ input:-moz-placeholder {
         rotate: -360deg;
     }
 }
+
+
+
+/* **--------------- Loader ---------------** */
+
+
+#loader{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* background-color: aquamarine; */
+    overflow: hidden;
+}
+
+.loader-text-1, .loader-text-2{
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+    width: 30vw;
+    height: 15vh;
+    overflow: hidden;
+}
+
+.loader-text-2{
+    top: 21vh;
+    left: 5vw;
+}
+
+.loader-text-content{
+    width: 100%;
+    height: 50vh;
+    /* margin-top: -20vh; */
+}
+ 
+.loader-text-content h1{
+    font-size: 6vw;
+}
+
+.loader-img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    width: 50vw;
+    height: 60vh;
+    background-image: url("assets/ss2.png");
+    background-size: cover;
+    background-position: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    z-index: 99;
+}
+
+#nike{
+    position: absolute;
+    top: 30%;
+    left: 100%;
+    width: 20vw;
+    height: 50vh;
+    z-index: 10;
+}
+
+.loading-text{
+    position: absolute;
+    bottom: 5vh;
+    left: 5vw;
+}
+
+.loading-text h4{
+    font-size: 2vw;
+    font-family: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.loading-text h4 span{
+    font-size: 2.2vw;
+    font-family: normal;
+    font-weight: 900;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+  span[class^="dot-"]{
+    opacity: 0;
+  }
+  .dot-one{
+    animation: dot-one 2s infinite linear
+  }
+  .dot-two{
+    animation: dot-two 2s infinite linear
+  }
+  .dot-three{
+    animation: dot-three 2s infinite linear
+  }
+  @keyframes dot-one{
+    0%{
+      opacity: 0;
+    }
+    15%{
+      opacity: 0;
+    }
+    25%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  
+  @keyframes dot-two{
+    0%{
+      opacity: 0;
+    }
+    25%{
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  
+  @keyframes dot-three{
+    0%{
+      opacity: 0;
+    }
+    50%{
+      opacity: 0;
+    }
+    75%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 1;
+    }
+  }

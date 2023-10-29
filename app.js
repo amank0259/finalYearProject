@@ -132,6 +132,7 @@ let serviceListHover = function(){
   
 }
 
+let bannerAnimation = function(){
 var tl = gsap.timeline({scrollTrigger:{
   trigger:".part-2",
   start:"45% 45%",
@@ -146,12 +147,77 @@ tl.to(".banner-1",{
 tl.to(".banner-2",{
   right: "-15%"
 },'a')
+}
 
+let loaderAnimation = function(){
+  var tl2 = gsap.timeline();
 
+tl2.to(".loader-text-content",{
+    marginTop: "0vh",
+    duration: 1,
+})
+.to(".loader-text-content",{
+    marginTop: "-14vh",
+    duration: 1,
+})
+.to(".loader-text-content",{
+    marginTop: "-28vh",
+    duration: 1,
+})
+.to(".loader-text-content",{
+    marginTop: "-42vh",
+    duration: 1,
+})
+.to(".loader-text-content",{
+    marginTop: "-56vh",
+    duration: 1,
+})
+.to(".loader-text-content",{
+    marginTop: "-70vh",
+    duration: 1,
+})
+.to(".loader-text-content",{
+    marginTop: "-84vh",
+    duration: 1,
+})
+.to(".loader-text-content",{
+    marginTop: "-98vh",
+    duration: 1,
+})
+.to(".loader-img",{
+    width: "100%",
+    height: "100vh",
+    opacity: "0"
+},'same')
+.to("#loader",{
+    dsiaplay: "none",
+    opacity: "0",
+},'same')
+.to("#loader",{
+    marginTop: "-49%",
+})
 
+var nike = document.getElementById("loader");
+var tilt = 0;
+var diftilt = 0;
+nike.addEventListener("mousemove",function(detail){
+    tilt = detail.clientX;
+    diftilt = detail.clientX - tilt;
+    gsap.to("#nike",{
+        ease: Power1,
+        top: detail.clientY,
+        left: detail.clientX,
+        xPercent: -170,
+        yPercent: -90,
+        rotate: gsap.utils.clamp(-80,80, diftilt * 0.5)
+    })
+})
+}
 
 
 magnetForIcon();
 leftImageChange();
 rightImageChange();
 serviceListHover();
+bannerAnimation();
+loaderAnimation();
